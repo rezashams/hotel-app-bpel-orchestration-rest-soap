@@ -1,0 +1,467 @@
+<definitions name="RoomSrvWSDL"
+    targetNamespace="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:rest="http://schemas.sun.com/jbi/wsdl-extensions/rest/"
+    xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL">
+    <types>
+        <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL"/>
+    </types>
+    <message name="getAllRoomsRequest">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="getAllRoomsResponse">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+     <message name="getRoomRequest">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="getRoomResponse">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="deleteRoomRequest">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="deleteRoomResponse">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="addRoomRequest">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="addRoomResponse">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="updateRoomRequest">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="updateRoomResponse">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="isRoomAvailableRequest">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="isRoomAvailableResponse">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+     <message name="bookRoomRequest">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <message name="bookRoomResponse">
+        <part name="part1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+    </message>
+    <portType name="RestOutboundPortType">
+        <operation name="getAllRooms">
+            <input name="getAllRoomsInput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:getAllRoomsRequest"/>
+            <output name="getAllRoomsOutput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:getAllRoomsResponse"/>
+        </operation>
+         <operation name="getRoom">
+            <input name="getRoomInput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:getRoomRequest"/>
+            <output name="getRoomOutput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:getRoomResponse"/>
+        </operation>
+        <operation name="addRoom">
+            <input name="addRoomInput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:addRoomRequest"/>
+            <output name="addRoomOutput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:addRoomResponse"/>
+        </operation>
+         <operation name="deleteRoom">
+            <input name="deleteRoomInput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:deleteRoomRequest"/>
+            <output name="deleteRoomOutput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:deleteRoomResponse"/>
+        </operation>
+        <operation name="updateRoom">
+            <input name="updateRoomInput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:updateRoomRequest"/>
+            <output name="updateRoomOutput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:updateRoomResponse"/>
+        </operation>
+        <operation name="isRoomAvailable">
+            <input name="isRoomAvailableInput"  xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:isRoomAvailableRequest"/>
+            <output name="isRoomAvailableOutput"  xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:isRoomAvailableResponse"/>
+        </operation>
+        <operation name="bookRoom">
+            <input name="bookRoomInput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:bookRoomRequest"/>
+            <output name="bookRoomOutput" xmlns:tns="http://j2ee.netbeans.org/wsdl/HMS_BPEL_V1/src/RoomSrvWSDL" message="tns:bookRoomResponse"/>
+        </operation>
+    </portType>
+    <binding name="RestOutboundBinding" type="tns:RestOutboundPortType">
+        <rest:binding/>
+        <operation name="getAllRooms">
+            <rest:operation>
+&lt;![CDATA[
+# required, URL of external resource
+# for example: http://somehost.com/users/{id}/address
+url=http://localhost:9192/api/v1/rooms
+
+# optional, HTTP verb GET, PUT, POST, DELETE, HEAD to access the resource, default to GET
+method=GET
+
+# optional, acceptable media types of response can be added as array elements in JSON format
+# Valid types are application/json, application/xml, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+accept-types=["application/xml" ]
+
+# optional, content type of outgoing payload, defaults to any type
+# valid types are application/json, application/xml, application/x-www-form-urlencoded, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+content-type=application/xml
+
+# optional, preferred natural languages for the response, added as array elements in JSON format
+accept-languages=[ ]
+
+# optional, additional custom HTTP headers can be added as pairs in JSON format in this property
+# for example:  { "authorization" : "257984234", "last-modifed" : "2009-04-23:12:00:00" }
+headers={ }
+
+# optional, style for the parameters, valid values are QUERY, MATRIX, defaults to QUERY
+param-style=Query
+
+# optional, additional custom HTTP parameters can be added as pairs in JSON format in this property
+# for example:  { "userid" : "abc" , "userpassword" : "123" }
+params={ }
+
+# optional, adding HTTP Basic Authentication header to the HTTP request,
+# if the two properties below are specified
+basic-auth-username=
+basic-auth-password=
+
+# optional, if the JSON document expected for a request has no root, remove it with the option request-root-removed
+request-root-removed=false
+
+#optional,if the response of a REST request has no root, you can add one with this option response-root-required. 
+response-root-required=false
+
+#The root name element is defined by response-root-name.
+response-root-name=myRoot
+
+]]&gt;</rest:operation>
+            <input name="getAllRoomsInput"/>
+            <output name="getAllRoomsOutput"/>
+        </operation>
+        <operation name="addRoom">
+            <rest:operation>
+&lt;![CDATA[
+# required, URL of external resource
+# for example: http://somehost.com/users/{id}/address
+url=http://localhost:9192/api/v1/room/create/{name}/{price}/{description}
+
+# optional, HTTP verb GET, PUT, POST, DELETE, HEAD to access the resource, default to GET
+method=GET
+
+# optional, acceptable media types of response can be added as array elements in JSON format
+# Valid types are application/json, application/xml, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+accept-types=["application/xml" ]
+
+# optional, content type of outgoing payload, defaults to any type
+# valid types are application/json, application/xml, application/x-www-form-urlencoded, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+content-type="application/xml"
+
+# optional, preferred natural languages for the response, added as array elements in JSON format
+accept-languages=[ ]
+
+# optional, additional custom HTTP headers can be added as pairs in JSON format in this property
+# for example:  { "authorization" : "257984234", "last-modifed" : "2009-04-23:12:00:00" }
+headers={ }
+
+# optional, style for the parameters, valid values are QUERY, MATRIX, defaults to QUERY
+param-style=Query
+
+# optional, additional custom HTTP parameters can be added as pairs in JSON format in this property
+# for example:  { "userid" : "abc" , "userpassword" : "123" }
+params={ }
+
+# optional, adding HTTP Basic Authentication header to the HTTP request,
+# if the two properties below are specified
+basic-auth-username=
+basic-auth-password=
+
+# optional, if the JSON document expected for a request has no root, remove it with the option request-root-removed
+request-root-removed=false
+
+#optional,if the response of a REST request has no root, you can add one with this option response-root-required. 
+response-root-required=false
+
+#The root name element is defined by response-root-name.
+response-root-name=myRoot
+
+]]&gt;</rest:operation>
+            <input name="addRoomInput"/>
+            <output name="addRoomOutput"/>
+        </operation>
+         <operation name="deleteRoom">
+            <rest:operation>
+&lt;![CDATA[
+# required, URL of external resource
+# for example: http://somehost.com/users/{id}/address
+url=http://localhost:9192/api/v1/room/delete/{id}
+
+# optional, HTTP verb GET, PUT, POST, DELETE, HEAD to access the resource, default to GET
+method=GET
+
+# optional, acceptable media types of response can be added as array elements in JSON format
+# Valid types are application/json, application/xml, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+accept-types=["application/xml" ]
+
+# optional, content type of outgoing payload, defaults to any type
+# valid types are application/json, application/xml, application/x-www-form-urlencoded, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+content-type=application/xml
+
+# optional, preferred natural languages for the response, added as array elements in JSON format
+accept-languages=[ ]
+
+# optional, additional custom HTTP headers can be added as pairs in JSON format in this property
+# for example:  { "authorization" : "257984234", "last-modifed" : "2009-04-23:12:00:00" }
+headers={ }
+
+# optional, style for the parameters, valid values are QUERY, MATRIX, defaults to QUERY
+param-style=Query
+
+# optional, additional custom HTTP parameters can be added as pairs in JSON format in this property
+# for example:  { "userid" : "abc" , "userpassword" : "123" }
+params={ }
+
+# optional, adding HTTP Basic Authentication header to the HTTP request,
+# if the two properties below are specified
+basic-auth-username=
+basic-auth-password=
+
+# optional, if the JSON document expected for a request has no root, remove it with the option request-root-removed
+request-root-removed=false
+
+#optional,if the response of a REST request has no root, you can add one with this option response-root-required. 
+response-root-required=false
+
+#The root name element is defined by response-root-name.
+response-root-name=myRoot
+
+]]&gt;</rest:operation>
+            <input name="deleteRoomInput"/>
+            <output name="deleteRoomOutput"/>
+        </operation>
+        <operation name="updateRoom">
+            <rest:operation>
+&lt;![CDATA[
+# required, URL of external resource
+# for example: http://somehost.com/users/{id}/address
+url=http://localhost:9192/api/v1/room/update/{id}/{name}/{price}/{description}
+
+# optional, HTTP verb GET, PUT, POST, DELETE, HEAD to access the resource, default to GET
+method=GET
+
+# optional, acceptable media types of response can be added as array elements in JSON format
+# Valid types are application/json, application/xml, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+accept-types=["application/xml" ]
+
+# optional, content type of outgoing payload, defaults to any type
+# valid types are application/json, application/xml, application/x-www-form-urlencoded, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+content-type="application/xml"
+
+# optional, preferred natural languages for the response, added as array elements in JSON format
+accept-languages=[ ]
+
+# optional, additional custom HTTP headers can be added as pairs in JSON format in this property
+# for example:  { "authorization" : "257984234", "last-modifed" : "2009-04-23:12:00:00" }
+headers={ }
+
+# optional, style for the parameters, valid values are QUERY, MATRIX, defaults to QUERY
+param-style=Query
+
+# optional, additional custom HTTP parameters can be added as pairs in JSON format in this property
+# for example:  { "userid" : "abc" , "userpassword" : "123" }
+params={ }
+
+# optional, adding HTTP Basic Authentication header to the HTTP request,
+# if the two properties below are specified
+basic-auth-username=
+basic-auth-password=
+
+# optional, if the JSON document expected for a request has no root, remove it with the option request-root-removed
+request-root-removed=false
+
+#optional,if the response of a REST request has no root, you can add one with this option response-root-required. 
+response-root-required=false
+
+#The root name element is defined by response-root-name.
+response-root-name=myRoot
+
+]]&gt;</rest:operation>
+            <input name="updateRoomInput"/>
+            <output name="updateRoomOutput"/>
+        </operation>
+        <operation name="getRoom">
+            <rest:operation>
+&lt;![CDATA[
+# required, URL of external resource
+# for example: http://somehost.com/users/{id}/address
+url=http://localhost:9192/api/v1/room/{id}
+
+# optional, HTTP verb GET, PUT, POST, DELETE, HEAD to access the resource, default to GET
+method=GET
+
+# optional, acceptable media types of response can be added as array elements in JSON format
+# Valid types are application/json, application/xml, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+accept-types=["application/xml" ]
+
+# optional, content type of outgoing payload, defaults to any type
+# valid types are application/json, application/xml, application/x-www-form-urlencoded, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+content-type=application/xml
+
+# optional, preferred natural languages for the response, added as array elements in JSON format
+accept-languages=[ ]
+
+# optional, additional custom HTTP headers can be added as pairs in JSON format in this property
+# for example:  { "authorization" : "257984234", "last-modifed" : "2009-04-23:12:00:00" }
+headers={ }
+
+# optional, style for the parameters, valid values are QUERY, MATRIX, defaults to QUERY
+param-style=Query
+
+# optional, additional custom HTTP parameters can be added as pairs in JSON format in this property
+# for example:  { "userid" : "abc" , "userpassword" : "123" }
+params={ }
+
+# optional, adding HTTP Basic Authentication header to the HTTP request,
+# if the two properties below are specified
+basic-auth-username=
+basic-auth-password=
+
+# optional, if the JSON document expected for a request has no root, remove it with the option request-root-removed
+request-root-removed=false
+
+#optional,if the response of a REST request has no root, you can add one with this option response-root-required. 
+response-root-required=false
+
+#The root name element is defined by response-root-name.
+response-root-name=myRoot
+
+]]&gt;</rest:operation>
+            <input name="getRoomInput"/>
+            <output name="getRoomOutput"/>
+        </operation>
+           <operation name="isRoomAvailable">
+            <rest:operation>
+&lt;![CDATA[
+# required, URL of external resource
+# for example: http://somehost.com/users/{id}/address
+url=http://localhost:9192/api/v1/room/available/{roomId}/{fromDate}/{toDate}
+
+# optional, HTTP verb GET, PUT, POST, DELETE, HEAD to access the resource, default to GET
+method=GET
+
+# optional, acceptable media types of response can be added as array elements in JSON format
+# Valid types are application/json, application/xml, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+accept-types=["application/xml" ]
+
+# optional, content type of outgoing payload, defaults to any type
+# valid types are application/json, application/xml, application/x-www-form-urlencoded, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+content-type=application/xml
+
+# optional, preferred natural languages for the response, added as array elements in JSON format
+accept-languages=[ ]
+
+# optional, additional custom HTTP headers can be added as pairs in JSON format in this property
+# for example:  { "authorization" : "257984234", "last-modifed" : "2009-04-23:12:00:00" }
+headers={ }
+
+# optional, style for the parameters, valid values are QUERY, MATRIX, defaults to QUERY
+param-style=Query
+
+# optional, additional custom HTTP parameters can be added as pairs in JSON format in this property
+# for example:  { "userid" : "abc" , "userpassword" : "123" }
+params={ }
+
+# optional, adding HTTP Basic Authentication header to the HTTP request,
+# if the two properties below are specified
+basic-auth-username=
+basic-auth-password=
+
+# optional, if the JSON document expected for a request has no root, remove it with the option request-root-removed
+request-root-removed=false
+
+#optional,if the response of a REST request has no root, you can add one with this option response-root-required. 
+response-root-required=false
+
+#The root name element is defined by response-root-name.
+response-root-name=myRoot
+
+]]&gt;</rest:operation>
+            <input name="isRoomAvailableInput"/>
+            <output name="isRoomAvailableOutput"/>
+        </operation>
+        <operation name="bookRoom">
+            <rest:operation>
+&lt;![CDATA[
+# required, URL of external resource
+# for example: http://somehost.com/users/{id}/address
+url=http://localhost:9192/api/v1/room/book/{roomId}/{fromDate}/{toDate}
+
+# optional, HTTP verb GET, PUT, POST, DELETE, HEAD to access the resource, default to GET
+method=GET
+
+# optional, acceptable media types of response can be added as array elements in JSON format
+# Valid types are application/json, application/xml, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+accept-types=["application/xml"]
+
+# optional, content type of outgoing payload, defaults to any type
+# valid types are application/json, application/xml, application/x-www-form-urlencoded, text/xml and text/plain
+# Binary, HL7 types are supported. Consult the documentation to get the complete list of the MIME type supported by OpenESB
+content-type=application/xml
+
+# optional, preferred natural languages for the response, added as array elements in JSON format
+accept-languages=[ ]
+
+# optional, additional custom HTTP headers can be added as pairs in JSON format in this property
+# for example:  { "authorization" : "257984234", "last-modifed" : "2009-04-23:12:00:00" }
+headers={ }
+
+# optional, style for the parameters, valid values are QUERY, MATRIX, defaults to QUERY
+param-style=Query
+
+# optional, additional custom HTTP parameters can be added as pairs in JSON format in this property
+# for example:  { "userid" : "abc" , "userpassword" : "123" }
+params={ }
+
+# optional, adding HTTP Basic Authentication header to the HTTP request,
+# if the two properties below are specified
+basic-auth-username=
+basic-auth-password=
+
+# optional, if the JSON document expected for a request has no root, remove it with the option request-root-removed
+request-root-removed=false
+
+#optional,if the response of a REST request has no root, you can add one with this option response-root-required. 
+response-root-required=false
+
+#The root name element is defined by response-root-name.
+response-root-name=myRoot
+
+]]&gt;</rest:operation>
+            <input name="bookRoomInput"/>
+            <output name="bookRoomOutput"/>
+        </operation>
+    </binding>
+    <service name="RestOutboundService">
+        <port name="RestOutboundWSDL_OutboundPort" binding="tns:RestOutboundBinding">
+            <rest:address/>
+        </port>
+    </service>
+    <plnk:partnerLinkType name="RestOutboundWSDL">
+        <!-- A partner link type is automatically generated when a new port type
+        is added. Partner link types are used by BPEL processes.
+
+        In a BPEL process, a partner link represents the interaction between
+        the BPEL process and a partner service. Each partner link is associated
+        with a partner link type.
+
+        A partner link type characterizes the conversational relationship
+        between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="RestOutboundPortTypeRole" portType="tns:RestOutboundPortType"/>
+    </plnk:partnerLinkType>
+</definitions>
